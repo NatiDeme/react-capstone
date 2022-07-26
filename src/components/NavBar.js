@@ -1,11 +1,13 @@
+import { Link } from 'react-router-dom';
+
 function navBar() {
   return (
     <div className="bg-my-dark-blue pt-2 pb-2 flex items-center justify-between">
-      <button type="button">
+      <Link to="/">
         <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-white hover:cursor-pointer" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
           <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
         </svg>
-      </button>
+      </Link>
       <p className="text-white text-lg font-semibold">2022</p>
       <div className="flex gap-4 mr-4">
         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-white" viewBox="0 0 20 20" fill="currentColor">

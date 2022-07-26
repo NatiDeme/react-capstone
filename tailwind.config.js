@@ -8,6 +8,10 @@ module.exports = {
       colors: {
         'my-dark-blue': '#4369B2',
         'more-darker-blue': '#35548B',
+        'my-light-blue': '#5687E2',
+      },
+      spacing: {
+        47: '11.3rem',
       },
     },
   },

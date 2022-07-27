@@ -5,6 +5,7 @@ import { getStrengthHeroesList } from '../redux/strength/Strength';
 
 function strength() {
   const heroes = useSelector((state) => state.strengthHeroReducer.heroes);
+  const baseURL = 'https://api.opendota.com';
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(getStrengthHeroesList());
@@ -28,12 +29,15 @@ function strength() {
       </div>
       <div>
         {heroes.map((i) => (
-          <div key={i.id} className="flex bg-my-dark-blue even:bg-more-darker-blue h-20 items-center text-white justify-between">
-            <p className="ml-2">{i.localized_name}</p>
-            <div className="mr-2">
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M13 9l3 3m0 0l-3 3m3-3H8m13 0a9 9 0 11-18 0 9 9 0 0118 0z" />
-              </svg>
+          <div key={i.id} className="flex bg-my-dark-blue even:bg-more-darker-blue h-20 items-center text-white">
+            <img src={baseURL + i.icon} alt="hero" className="ml-2 h-12" />
+            <div className="flex w-full justify-between">
+              <p className="ml-2">{i.localized_name}</p>
+              <div className="mr-2">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M13 9l3 3m0 0l-3 3m3-3H8m13 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
             </div>
           </div>
         ))}

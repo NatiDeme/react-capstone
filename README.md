@@ -2,7 +2,8 @@
 
 # Dota 2 Heroes
 
-> This project is a website that serves as an information hub about heroes in the game Dota 2.
+- This project is a website that serves as an information hub about heroes in the game Dota 2.
+[![Video](https://cdn.loom.com/sessions/thumbnails/437a84a092cf4d449d3c0a529c8d4a22-with-play.gif)](https://www.loom.com/share/437a84a092cf4d449d3c0a529c8d4a22)
 > ![image](https://user-images.githubusercontent.com/29539518/181268203-0e309bc8-724c-46dd-bd3c-493448cc08ad.png)
 ![image](https://user-images.githubusercontent.com/29539518/181268504-2ccc5eaf-75b1-4a66-ab7f-ea167bca5341.png)
 

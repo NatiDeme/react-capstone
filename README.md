@@ -3,6 +3,9 @@
 # Dota 2 Heroes
 
 > This project is a website that serves as an information hub about heroes in the game Dota 2.
+> ![image](https://user-images.githubusercontent.com/29539518/181268203-0e309bc8-724c-46dd-bd3c-493448cc08ad.png)
+![image](https://user-images.githubusercontent.com/29539518/181268504-2ccc5eaf-75b1-4a66-ab7f-ea167bca5341.png)
+
 
 
 ## Built With
@@ -48,8 +51,8 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgement
 
-Original design idea by [Nelson Sakwa on Behance](https://www.behance.net/sakwadesignstudio).
-Thank you for Microverse and my programming partners!
+- Original design idea by [Nelson Sakwa on Behance](https://www.behance.net/sakwadesignstudio).
+- Thank you for Microverse and my programming partners!
 
 ## 📝 License
 

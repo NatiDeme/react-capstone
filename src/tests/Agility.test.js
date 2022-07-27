@@ -8,7 +8,7 @@ import store from '../redux/configureStore';
 
 jest.mock('axios');
 
-describe('The Strength Heroes list is tested', () => {
+describe('The Agility Heroes list is tested', () => {
   beforeEach(async () => {
     const result = {
       data: [
@@ -146,7 +146,7 @@ describe('The Strength Heroes list is tested', () => {
     }));
   });
 
-  test('should render the strength heroes page', async () => {
+  test('should render the agility heroes page', async () => {
     render(<Provider store={store}><Agility /></Provider>);
     await waitFor(() => {
       expect(screen.getAllByAltText('hero').length).toBeGreaterThan(1);

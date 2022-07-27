@@ -1,18 +1,30 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { useSelector, useDispatch } from 'react-redux';
 import strength from '../asset/strength.png';
 import intel from '../asset/intel.png';
 import agile from '../asset/agile.png';
 import Contain from './Contain';
+import { getAllHeroesList } from '../redux/main/Home';
 
 function home() {
+  const allHeroes = useSelector((state) => state.allHeroReducer.heroes);
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(getAllHeroesList());
+  }, [dispatch]);
+
+  const strengthNum = allHeroes.filter((i) => i.primary_attr !== 'agi' && i.primary_attr !== 'int').length;
+  const agilityNum = allHeroes.filter((i) => i.primary_attr !== 'str' && i.primary_attr !== 'int').length;
+  const intellNum = allHeroes.filter((i) => i.primary_attr !== 'agi' && i.primary_attr !== 'str').length;
+
   return (
     <>
       <Contain />
-      <div className="bg-more-darker-blue pl-2">
+      <div className="bg-more-darker-blue pl-2" data-testid="links">
         <p className=" text-sm text-white font-thin">CATEGORIES PRIMARY ATTRIBUTE</p>
       </div>
-      <div className="all-cards flex flex-wrap">
+      <div className="all-cards flex flex-wrap" data-testid="links">
         <Link to="/strength">
           <div className="bg-my-dark-blue w-48 h-44 pt-1">
             <div className="flex justify-between">
@@ -26,7 +38,10 @@ function home() {
             <div className="text-white text-lg font-bold flex flex-col items-end mr-2">
               <p>Strength</p>
               <p>Heroes</p>
-              <p>42</p>
+              <p>
+                {strengthNum }
+
+              </p>
             </div>
           </div>
         </Link>
@@ -43,7 +58,10 @@ function home() {
             <div className="text-white text-lg font-bold flex flex-col items-end mr-2">
               <p>Agility</p>
               <p>Heroes</p>
-              <p>38</p>
+              <p>
+                { agilityNum }
+                {' '}
+              </p>
             </div>
           </div>
         </Link>
@@ -60,7 +78,10 @@ function home() {
             <div className="text-white text-lg font-bold flex flex-col items-end mr-2">
               <p>Intelligence</p>
               <p>Heroes</p>
-              <p>43</p>
+              <p>
+                {' '}
+                { intellNum}
+              </p>
             </div>
           </div>
         </Link>

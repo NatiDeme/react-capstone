@@ -1,13 +1,14 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Bookstore
+# Dota 2 Heroes
 
-> This project is a website that serves as a bookstore where you can add books and find them as well.
+> This project is a website that serves as an information hub about heroes in the game Dota 2.
 
 
 ## Built With
 
 - React
+- Tailwind CSS
 
 <!-- ## Live Demo
 
@@ -47,6 +48,7 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgement
 
+Original design idea by [Nelson Sakwa on Behance](https://www.behance.net/sakwadesignstudio).
 Thank you for Microverse and my programming partners!
 
 ## 📝 License

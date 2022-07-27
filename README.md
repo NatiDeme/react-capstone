@@ -12,7 +12,7 @@
 
 ## Live Demo
 
-[Live Demo Link](https://62e11f35ad63ff029ce279a5--heroesofdota2.netlify.app)
+[Live Demo Link](https://62e145834c84cd265ced3323--heroesofdota2.netlify.app)
 
 
 ## Getting Started

@@ -4,6 +4,7 @@ import Home from './components/Home';
 import Strength from './components/Strength';
 import Agility from './components/Agility';
 import Intelligence from './components/Intelligence';
+import { getStrengthHeroesList } from './redux/strength/Strength';
 
 function App() {
   return (
@@ -20,5 +21,5 @@ function App() {
     </>
   );
 }
-
+getStrengthHeroesList();
 export default App;

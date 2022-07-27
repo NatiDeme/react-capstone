@@ -12,7 +12,7 @@ function home() {
       </div>
       <div className="all-cards flex flex-wrap">
         <Link to="/strength">
-          <div className="bg-my-dark-blue w-47 h-44 pt-1">
+          <div className="bg-my-dark-blue w-48 h-44 pt-1">
             <div className="flex justify-between">
               <img src={strength} alt="strength icon" className="h-20 w-20 opacity-80" />
               <div className="mr-2">
@@ -29,7 +29,7 @@ function home() {
           </div>
         </Link>
         <Link to="/agility">
-          <div className="bg-more-darker-blue w-47 h-44 pt-1">
+          <div className="bg-more-darker-blue w-48 h-44 pt-1">
             <div className="flex justify-between">
               <img src={intel} alt="strength icon" className="h-20 w-20 opacity-80" />
               <div className="mr-2">
@@ -46,7 +46,7 @@ function home() {
           </div>
         </Link>
         <Link to="/intelligence">
-          <div className="bg-more-darker-blue w-47 h-44 pt-1">
+          <div className="bg-more-darker-blue w-48 h-44 pt-1">
             <div className="flex justify-between">
               <img src={strength} alt="strength icon" className="h-20 w-20 opacity-80" />
               <div className="mr-2">

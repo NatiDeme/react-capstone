@@ -10,9 +10,9 @@
 - React
 - Tailwind CSS
 
-<!-- ## Live Demo
+## Live Demo
 
-[Live Demo Link](https://livedemo.com) -->
+[Live Demo Link](https://62e11f35ad63ff029ce279a5--heroesofdota2.netlify.app)
 
 
 ## Getting Started

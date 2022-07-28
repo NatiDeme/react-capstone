@@ -1,22 +1,51 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+import { useLocation } from 'react-router-dom';
 import intel from '../asset/intel.png';
+import Agility from '../asset/agile.png';
+import Stren from '../asset/strength.png';
+import { getStrengthHeroesList } from '../redux/strength/Strength';
 import { getIntelligenceHeroesList } from '../redux/intelligence/Intelligence';
+import { getAgilityHeroesList } from '../redux/agility/Agility';
 
-function intelligence() {
-  const heroes = useSelector((state) => state.intelligenceHeroReducer.heroes);
+function details() {
+  const location = useLocation();
+  const me = location.state.att;
+  let heroes = {};
+  let headLine = '';
   const baseURL = 'https://api.opendota.com';
   const dispatch = useDispatch();
-  useEffect(() => {
-    dispatch(getIntelligenceHeroesList());
-  }, [dispatch]);
-
+  let picture = '';
+  if (me === 'int') {
+    headLine = 'Intelligence';
+    picture = intel;
+    heroes = useSelector((state) => state.intelligenceHeroReducer.heroes);
+    useEffect(() => {
+      dispatch(getIntelligenceHeroesList());
+    }, [dispatch]);
+  }
+  if (me === 'agi') {
+    headLine = 'Agility';
+    picture = Agility;
+    heroes = useSelector((state) => state.agilityHeroReducer.heroes);
+    useEffect(() => {
+      dispatch(getAgilityHeroesList());
+    }, [dispatch]);
+  }
+  if (me === 'str') {
+    headLine = 'Strength';
+    picture = Stren;
+    heroes = useSelector((state) => state.agilityHeroReducer.heroes);
+    useEffect(() => {
+      dispatch(getStrengthHeroesList());
+    }, [dispatch]);
+  }
   return (
     <>
       <div className="bg-my-light-blue flex gap-6 items-center pl-8">
-        <img src={intel} alt="Dota logo" className="h-36 opacity-95" />
+        <img src={picture} alt="Dota logo" className="h-36 opacity-95" />
         <div className="text-white">
-          <p className="font-black text-3xl">Intelligence</p>
+          <p className="font-black text-3xl">{ headLine }</p>
           <p>
             { heroes.length }
             {' '}
@@ -25,7 +54,11 @@ function intelligence() {
         </div>
       </div>
       <div className="bg-more-darker-blue pl-2">
-        <p className=" text-sm text-white font-thin">STRENGTH HEROES</p>
+        <p className=" text-sm text-white font-thin">
+          {headLine}
+          {' '}
+          HEROES
+        </p>
       </div>
       <div>
         {heroes.map((i) => (
@@ -46,4 +79,4 @@ function intelligence() {
   );
 }
 
-export default intelligence;
+export default details;

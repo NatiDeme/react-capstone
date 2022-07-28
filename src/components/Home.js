@@ -25,7 +25,7 @@ function home() {
         <p className=" text-sm text-white font-thin">CATEGORIES PRIMARY ATTRIBUTE</p>
       </div>
       <div className="all-cards flex flex-wrap" data-testid="links">
-        <Link to="/strength">
+        <Link to={{ pathname: '/details' }} state={{ att: 'str' }}>
           <div className="bg-my-dark-blue w-48 h-44 pt-1">
             <div className="flex justify-between">
               <img src={strength} alt="strength icon" className="h-20 w-20 opacity-80" />
@@ -45,7 +45,7 @@ function home() {
             </div>
           </div>
         </Link>
-        <Link to="/agility">
+        <Link to={{ pathname: '/details' }} state={{ att: 'agi' }}>
           <div className="bg-more-darker-blue w-48 h-44 pt-1">
             <div className="flex justify-between">
               <img src={agile} alt="strength icon" className="h-20 w-20 opacity-80" />
@@ -65,7 +65,7 @@ function home() {
             </div>
           </div>
         </Link>
-        <Link to="/intelligence">
+        <Link to={{ pathname: '/details' }} state={{ att: 'int' }}>
           <div className="bg-more-darker-blue w-48 h-44 pt-1">
             <div className="flex justify-between">
               <img src={intel} alt="strength icon" className="h-20 w-20 opacity-80" />

@@ -15,7 +15,7 @@ function contain() {
         <img src={dota} alt="Dota logo" className="h-36 opacity-95" />
         <div className="text-white">
           <p className="font-black text-3xl">Dota 2</p>
-          <p>
+          <p data-testid="num-appeared">
             {allHeroes.length}
             {' '}
             Heros

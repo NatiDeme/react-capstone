@@ -3,12 +3,23 @@ import {
 } from '@testing-library/react';
 import { Provider } from 'react-redux';
 import axios from 'axios';
-import Agility from '../components/Agility';
+import Details from '../components/Details';
 import store from '../redux/configureStore';
 
 jest.mock('axios');
+const mockHistoryPush = jest.fn();
+jest.mock('react-router-dom', () => ({
+  ...jest.requireActual('react-router-dom'),
+  useHistory: () => ({
+    push: mockHistoryPush,
+  }),
+  useLocation: () => ({
+    pathname: '/',
+    state: { att: 'agi' },
+  }),
+}));
 
-describe('The Agility Heroes list is tested', () => {
+describe('The Detail Heroes list is tested', () => {
   beforeEach(async () => {
     const result = {
       data: [
@@ -146,8 +157,8 @@ describe('The Agility Heroes list is tested', () => {
     }));
   });
 
-  test('should render the agility heroes page', async () => {
-    render(<Provider store={store}><Agility /></Provider>);
+  test('should render the detail heroes page', async () => {
+    render(<Provider store={store}><Details /></Provider>);
     await waitFor(() => {
       expect(screen.getAllByAltText('hero').length).toBeGreaterThan(1);
     });
